@@ -1,2 +1,2 @@
-# w-rner
-drilling and tapping machine control SPS - controllino code
+# wörner
+drilling and tapping machine SPS - controllino code
