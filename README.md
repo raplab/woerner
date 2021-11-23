@@ -8,13 +8,8 @@ Controllino MAXI Automation https://www.controllino.com/product/controllino-maxi
 # Documentation
 
 ## PIN Out
-
-| Controllino Pin | Variable Name | Cabinet Pin |
-|-|-|-|-|
-| A | B | C |
-
-|   |   |   |   |   |
-|---|---|---|---|---|
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
+| Controllino Pin | Variable Name |  Cabinet Pin | Notes |   
+|---|---|---|---|
+|   |   |   |   |
+|   |   |   |   |
+|   |   |   |   |
