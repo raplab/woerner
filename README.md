@@ -8,8 +8,23 @@ Controllino MAXI Automation https://www.controllino.com/product/controllino-maxi
 # Documentation
 
 ## PIN Out
-| Controllino Pin | Variable Name |  Cabinet Pin | Notes |   
-|---|---|---|---|
-|   |   |   |   |
-|   |   |   |   |
-|   |   |   |   |
+| Controllino Pin | Variable Name |  Input or Output |Cabinet Pin | Notes |   
+|---|---|---|---|---|
+| AI0   |   |   |   |   |
+| AI1   |   |   |   |   |
+| AI2   |   |   |   |   |
+| AI3   |   |   |   |   |
+| AI4   |   |   |   |   |
+| AI5   |   |   |   |   |
+| AI6   |   |   |   |   |
+| AI7   |   |   |   |   |
+| AI9   |   |   |   |   |
+| AI10  |   |   |   |   |
+| AI11  |   |   |   |   |
+| AI12  |   |   |   |   |
+| DO0   |   |   |   |   |
+| DO1   |   |   |   |   |
+| DO2   |   |   |   |   |
+| DO3   |   |   |   |   |
+| AO0   |   |   |   |   |
+
