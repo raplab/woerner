@@ -11,21 +11,21 @@ The controllino maxi automation acts as an SPS controlling various inputs and st
 ## PIN Out
 | Controllino Pin | Variable Name |  Input or Output |Cabinet Pin | Notes |   
 |---|---|---|---|---|
-| AI0   |  estop_pin |   |   |   |
-| AI1   |  contactor_pin |   |   |   |
-| AI2   |  vfd_state_pin |   |   |   |
-| AI3   |  cp_on_pin |   |   |   |
-| AI4   |  cp_off_pin |   |   |   |
-| AI5   |  cp_cw_pin |   |   |   |
-| AI6   |  cp_ccw_pin |   |   |   |
-| AI7   |  cp_mode_pin |   |   |   |
-| AI9   |  w_topswitch_pin |   |   |   |
-| AI10  |  w_bottomswitch_pin |   |   |   |
-| AI11  |  w_footswitch_pin |   |   |   |
-| AI12  |  cp_speed_pin |   |   |   |
-| DO0   |  vfd_run_pin |   |   |   |
-| DO1   |  vfd_cw_pin |   |   |   |
-| DO2   |  vfd_ccw_pin |   |   |   |
-| DO3   |  cp_indicator_pin |   |   |   |
-| AO0   |  vfd_speed_pin |   |   | Analog out from 0-10V to control motor speed  |
+| AI0   |  estop_pin |  INPUT |  - | read e-stop state, HIGH=ESTOP |
+| AI1   |  contactor_pin | INPUT  | -  | read contactor state to determin if VFD has power  |
+| AI2   |  vfd_state_pin |  INPUT | -  | read VFD state |
+| AI3   |  cp_on_pin | INPUT  | -  |  spindle on |
+| AI4   |  cp_off_pin | INPUT  | -  |  spindle off |
+| AI5   |  cp_cw_pin | INPUT  | -  |  spindle direction clockwise |
+| AI6   |  cp_ccw_pin | INPUT  | -  | spindle direction counterclockwise  |
+| AI7   |  cp_mode_pin |  INPUT | -  | select between drilling or tapping mode  |
+| AI9   |  w_topswitch_pin | INPUT  | -  | top switch for tapping mode (reverse spindle direction on HIGH) |
+| AI10  |  w_bottomswitch_pin | INPUT  | -  |  bottom switch for tapping mode (reverse spindle direction on HIGH) |
+| AI11  |  w_footswitch_pin |  INPUT | -  | foot switch for tapping mode (reverse spindle direction on HIGH)  |
+| AI12  |  cp_speed_pin | INPUT  | -  |  analog input from 4.7k pot (0,1025) mapped to (0,255) vfd_speed_pin |
+| DO0   |  vfd_run_pin | ?  |   | -  |
+| DO1   |  vfd_cw_pin | OUTPUT | -  |  turn spindle on in clockwise direction |
+| DO2   |  vfd_ccw_pin | OUTPUT  | -  |  turn spindle on in counterclockwise direction  |
+| DO3   |  cp_indicator_pin | OUTPUT   | -  |  led - high if spindle is on |
+| AO0   |  vfd_speed_pin | ANALOG OUTPUT  |   | Analog out from 0-10V to control motor speed  |
 
