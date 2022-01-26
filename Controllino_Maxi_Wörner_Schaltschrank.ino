@@ -18,6 +18,7 @@
 
 //Electrical Cabinet - Input / Output
 #define ec_reset_led CONTROLLINO_DO3
+#define tap_speed_pin CONTROLLINO_AI13 //analog input 4.7k pot setting the tapping speed
 
 //Wörner endstops for tapping - Input
 #define w_topswitch_pin CONTROLLINO_AI9
@@ -198,7 +199,12 @@ void get_spindle_dir() {
 
 void set_spindle_speed() {
   //set spindle speed acording to pot value
-  spindle_speed = analogRead(cp_speed_pin);
+  if(machine_mode == DRILL){
+    spindle_speed = analogRead(cp_speed_pin);;
+  }
+  if(machine_mode == TAP){
+    spindle_speed = analogRead(tap_speed_pin);;
+  }
   int speed_value = int(map(spindle_speed, 0, 1025, 30, 255));
   analogWrite(vfd_speed_pin, speed_value);
 }
