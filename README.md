@@ -24,9 +24,9 @@ The controllino maxi automation acts as an SPS controlling various inputs and st
 | AI11  |  w_footswitch_pin |  INPUT | -  | foot switch for tapping mode (reverse spindle direction on HIGH)  |
 | AI12  |  cp_speed_pin | INPUT  | -  |  analog input from 4.7k pot (0,1025) mapped to (0,255) vfd_speed_pin |
 | AI13  |  tap_speed_pin | INPUT  | -  |  analog input from 4.7k pot (0,1025) mapped to (0,255) tap_speed_pin |
-| DO0   |  vfd_run_pin | OUTPUT  | -  | run spindle  |
+| DO0   |  cp_indicator_pin | OUTPUT  | -  | turn led on if spindle is on  |
 | DO1   |  vfd_cw_pin | OUTPUT | -  |  turn spindle on in clockwise direction |
 | DO2   |  vfd_ccw_pin | OUTPUT  | -  |  turn spindle on in counterclockwise direction  |
-| DO3   |  cp_indicator_pin | OUTPUT   | -  |  led - high if spindle is on |
+| DO3   |  ec_reset_pin | OUTPUT   | -  |  led - high if reset is required |
 | AO0   |  vfd_speed_pin | ANALOG OUTPUT  |   | Analog out from 0-10V to control motor speed  |
 
