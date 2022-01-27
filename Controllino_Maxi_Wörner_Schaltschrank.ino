@@ -27,7 +27,7 @@
 
 //Eaton DE1 Control- Input / Output
 #define vfd_state_pin CONTROLLINO_AI2 //input
-#define vfd_run_pin CONTROLLINO_DO0
+//#define vfd_run_pin CONTROLLINO_DO0
 #define vfd_cw_pin CONTROLLINO_DO1
 #define vfd_ccw_pin CONTROLLINO_DO2
 #define vfd_speed_pin CONTROLLINO_AO0 // Analog out 0 - 0-10V
@@ -76,7 +76,7 @@ void setup() {
 
   //eaton DE1
   pinMode(vfd_state_pin, INPUT);
-  pinMode(vfd_run_pin, OUTPUT);
+  //pinMode(vfd_run_pin, OUTPUT);
   pinMode(vfd_cw_pin, OUTPUT);
   pinMode(vfd_ccw_pin, OUTPUT);
   pinMode(vfd_speed_pin, OUTPUT);
@@ -129,6 +129,7 @@ void run_machine() {
   //turn machine on or off
   switch (machine_state) {
     case ON:
+      digitalWrite(cp_indicator_pin, HIGH);
       set_spindle_speed();
       if(machine_mode == DRILL){
         get_spindle_dir();
@@ -141,12 +142,13 @@ void run_machine() {
         get_tapping_dir();
         set_spindle_dir();
       }
-      digitalWrite(vfd_run_pin, HIGH);
+      //digitalWrite(vfd_run_pin, HIGH);
       break;
     case OFF:
+      digitalWrite(cp_indicator_pin, LOW);
       spindle_direction = NONE;
       set_spindle_dir();
-      digitalWrite(vfd_run_pin, LOW);
+      //digitalWrite(vfd_run_pin, LOW);
       break;
     default:
       break;
@@ -265,6 +267,7 @@ void tapping_mode() {
 void estop_mode() {
   Serial.println("ESTOP MODE");
   digitalWrite(ec_reset_led, HIGH);
+  digitalWrite(cp_indicator_pin, LOW);
 
   while (true) { 
     if (digitalRead(estop_pin) == LOW && digitalRead(contactor_pin) == HIGH) {
